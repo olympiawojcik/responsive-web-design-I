@@ -276,17 +276,15 @@ hr {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        border: 5px dotted green;
+        align-items: center;
     }
 
     .responsive {
         width: 100%;
         margin: 10px 0 10px;
     }
-    .intro button {
+    .started {
         padding: 0;
         width: 100px;
-        border: 1px solid gray
     }
 }
