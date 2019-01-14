@@ -91,10 +91,8 @@ nav a {
 
 .intro-container {
 	text-align: center;
-	/* border: 3px solid green; */
 }
 .intro  {
-	/* border: 4px dashed red; */
 	display: inline-block;
 	width: 450px;
 	text-align: center;
@@ -103,7 +101,6 @@ nav a {
 
  .intro h1 {
 	font-size: 50pt;
-	/* border: 1px dashed red; */
 }  
 
 
@@ -115,7 +112,7 @@ nav a {
 	padding: 20px 10px 10px 20px;
 }
 
-.intro button {
+.started {
 	padding: 5px 40px 5px;
 	border: 1px solid black;
 	font-family: 'Titillium Web';
@@ -139,14 +136,14 @@ header p {
 }
 
 
-.top-content .features {
+.features {
 	display: inline-block;
 	/* border: 1px solid red; */
 	width: 49%;
 	margin-right: 5px;
 }
 
-.top-content .about {
+.about {
 	display: inline-block;
 	/* border: 1px solid red; */
 	width: 49%;
@@ -162,20 +159,20 @@ header p {
 	padding: 20px 0 30px;
 }
 
-.bottom-content .services {
+.services {
 	display: inline-block;
 	width: 32%;
 	/* border: 1px solid red; */
 
 }
 
-.bottom-content .product {
+.product {
 	display: inline-block;
 	width: 32%;
 	margin: 0px 10px 0px;
 }
 
-.bottom-content .vision {
+.vision {
 	display: inline-block;
 	width: 32%;
 }
@@ -187,13 +184,27 @@ footer p {
 	text-align: center;
 }
 
+hr {
+    display: none;
+}
+
 /*for this width and smaller...*/
 @media(max-width: 800px){
+    .container {
+        width: 100%;
+    }
     .header-container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .logo {
         order: -1;
         width: 170px;
@@ -202,6 +213,7 @@ footer p {
 
     .introimg {
         display: none;
+        padding: none;
     }
 
     h1 {
@@ -210,8 +222,12 @@ footer p {
 }
 
 @media(max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+
     .header-container {
-        border: 1px dashed orange;
+        width: 100%;
     }
 
     nav {
@@ -219,6 +235,58 @@ footer p {
         flex-direction: column;
         text-align: center;
         line-height: 3;
+    }
 
+    nav a {
+        border-top: 1px solid lightgray;
+    }
+
+    nav a:last-of-type {
+        border-bottom: 1px solid lightgray;
+    }
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .responsive {
+        width: 500px;    
+        margin-top: 20px; 
+    } 
+    .product {
+        margin: 0;
+    }
+
+    .intro-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .intro {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 5px dotted green;
+    }
+
+    .responsive {
+        width: 100%;
+        margin: 10px 0 10px;
+    }
+    .intro button {
+        padding: 0;
+        width: 100px;
+        border: 1px solid gray
     }
 }
